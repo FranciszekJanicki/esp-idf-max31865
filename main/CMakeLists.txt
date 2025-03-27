@@ -1,5 +1,9 @@
 idf_component_register(
     SRCS
         "main.cpp"
-    REQUIRES
+    INCLUDE_DIRS
+        "."
+    REQUIRES 
+        max31865
+        utility
 )

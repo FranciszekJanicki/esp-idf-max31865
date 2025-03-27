@@ -123,7 +123,8 @@ namespace MAX31865 {
 
     void MAX31865::set_high_fault_registers(HIGH_FAULT const high_fault) const noexcept
     {
-        this->spi_device_.write_word(std::to_underlying(RA::HIGH_FAULT_H), std::bit_cast<std::uint16_t>(high_fault));
+        this->spi_device_.write_bytes(std::to_underlying(RA::HIGH_FAULT_H),
+                                      std::bit_cast<std::array<std::uint8_t, sizeof(HIGH_FAULT)>>(high_fault));
     }
 
     HIGH_FAULT MAX31865::get_high_fault_registers() const noexcept

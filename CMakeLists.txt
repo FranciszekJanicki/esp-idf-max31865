@@ -8,7 +8,7 @@ message(STATUS "Third-party path: ${THIRD_PARTY_DIR}")
 message(STATIS "Nanopb dir: ${NANOPB_DIR}")
 
 if(NOT DEFINED MAKE_PROJECT_NAME)
-    SET(MAKE_PROJECT_NAME devcontainer-esp-idf-clean)
+    SET(MAKE_PROJECT_NAME devcontainer-esp-idf-sh1107)
 endif(NOT DEFINED MAKE_PROJECT_NAME)
 
 project(${MAKE_PROJECT_NAME})
